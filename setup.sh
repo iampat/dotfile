@@ -1,3 +1,6 @@
-mv $HOME/.bashrc $/.bashrc.bak.$RANDOM
-ln -s dotbashrc $HOME/.bashrc
+#!/bin/bash
+
+cp dotbashrc $HOME/.bashrc
 source $HOME/.bashrc
+
+cp dottmux.conf $HOME/.tmux.conf
