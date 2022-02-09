@@ -38,7 +38,7 @@ sudo mv bazel.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 # we are using bazel 4.0.0 https://docs.bazel.build/versions/main/install-ubuntu.html
 sudo apt update && sudo apt install bazel-4.0.0
-sudo ln -s /usr/bin/bazel-1.0.0 /usr/bin/bazel
+sudo ln -s /usr/bin/bazel-4.0.0 /usr/bin/bazel
 
 ## install slack
 # sudo snap install slack --classic
