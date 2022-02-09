@@ -31,13 +31,19 @@
 # sudo apt-get update
 # sudo apt-get install google-cloud-sdk
 
-# sudo apt upgrade
-# sudo apt autoremove
+# install bazel
+sudo apt install apt-transport-https curl gnupg
+curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor > bazel.gpg
+sudo mv bazel.gpg /etc/apt/trusted.gpg.d/
+echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+# we are using bazel 4.0.0 https://docs.bazel.build/versions/main/install-ubuntu.html
+sudo apt update && sudo apt install bazel-4.0.0
+sudo ln -s /usr/bin/bazel-1.0.0 /usr/bin/bazel
 
-# install slack
+## install slack
 # sudo snap install slack --classic
 
-# install vs code https://code.visualstudio.com/docs/setup/linux
+## install vs code https://code.visualstudio.com/docs/setup/linux
 # wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 # sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 # sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -45,3 +51,7 @@
 # sudo apt install apt-transport-https
 # sudo apt update
 # sudo apt install code # or code-insiders
+
+# sudo apt upgrade
+# sudo apt autoremove
+
