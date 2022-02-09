@@ -133,9 +133,10 @@ fi
 export PYTHON2_BIN_PATH=/usr/bin/python2.7
 
 # export PATH=$PATH:/home/ali/.local/bin
-# export PATH=/usr/local/cuda-11/bin${PATH:+:${PATH}}
 
-# export LD_LIBRARY_PATH=/usr/local/cuda-11/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-11/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 
 # export CUDA_HOME=/usr/local/cuda
 # export DYLD_LIBRARY_PATH=$CUDA_HOME/lib64:$DYLD_LIBRARY_PATH
