@@ -52,8 +52,12 @@
 # sudo apt update
 # sudo apt install code # or code-insiders
 
-# Bazel need python 2
-sudo apt install python2 python2-dev
+# # Bazel need python 2
+# sudo apt install python2 python2-dev
+
+# # python dev
+# sudo apt install python3-dev
+
 
 # # Clang 11
 # sudo apt install clang-11 lld-11 llvm-11
