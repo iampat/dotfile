@@ -200,3 +200,9 @@ export PS1="\$(date +%Y-%m-%d):\t \$PWD/\[\e[42m\]\`parse_git_branch\`\[\e[m\]\n
 
 # gcloud credentials
 export GCLOUD_CREDENTIALS=$(cat ~/.config/gcloud/application_default_credentials.json)
+
+
+export SRC_HOME=${HOME}/workspace
+export SKEL=${SRC_HOME}/serve-robotics/skel
+export PMX_CONFIG_PATH=${SKEL}/pmx/rover/config
+

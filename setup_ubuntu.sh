@@ -61,6 +61,13 @@
 
 # # Clang 11
 # sudo apt install clang-11 lld-11 llvm-11
+# sudo apt install clang-format-11 clang-tidy-11 clang-tools-11
+
+# # git command line 
+# curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+# echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+# sudo apt update
+# sudo apt install gh
 
 # sudo apt upgrade
 # sudo apt autoremove

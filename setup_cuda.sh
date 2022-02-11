@@ -2,7 +2,7 @@
 # https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
 # pre install
-sudo apt-get install linux-headers-$(uname -r)
+# sudo apt-get install linux-headers-$(uname -r)
 
 # # if you have CUDA on your machine https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#handle-uninstallation
 # sudo /usr/local/cuda/bin/cuda-uninstaller
@@ -23,4 +23,4 @@ sudo apt-get install linux-headers-$(uname -r)
 # https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#downloading
 # sudo apt install libnvinfer8 libnvinfer-dev
 # sudo apt install libnvinfer-plugin8 libnvinfer-plugin-dev
-sudo apt install libnvparsers8 libnvparsers-dev
+# sudo apt install libnvparsers8 libnvparsers-dev
