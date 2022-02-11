@@ -69,6 +69,12 @@
 # sudo apt update
 # sudo apt install gh
 
+# sudo apt install hibernate pm-utils 
+
+# sudo apt install python3-pip
+
+# python3 -m pip install pre-commit
+
 # sudo apt upgrade
 # sudo apt autoremove
 
