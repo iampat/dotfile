@@ -20,10 +20,12 @@
 # sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
 # sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
 # sudo apt-get update
-# # sudo apt-get -y install cuda-11.5 nvidia-gds-11.5
+# # sudo apt-get -y install cuda-11 nvidia-gds-11
 #
 # Tensor RT
 # https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#downloading
+sudo apt install cuda-nvcc-11 libnpp-11 libnpp-dev-11
+
 sudo apt install libnvinfer8 libnvinfer-dev
 sudo apt install libnvinfer-plugin8 libnvinfer-plugin-dev
 sudo apt install libnvparsers8 libnvparsers-dev

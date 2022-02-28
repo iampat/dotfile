@@ -42,7 +42,7 @@ sudo apt install clang-11 lld-11 llvm-11
 sudo apt install clang-format-11 clang-tidy-11 clang-tools-11
  
 # protobuf
-sudo apt install protobuf-compiler
+sudo apt install protobuf-compiler protobuf-c-compiler
 
 sudo apt install emacs xclip tmux
 
