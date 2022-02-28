@@ -1,6 +1,12 @@
-git config --global user.email "ali@amiri.dev"
-git config --global user.name "Ali Amiri"
+# git config --global user.email "ali@amiri.dev"
+# git config --global user.name "Ali Amiri"
+# 
+# gh auth
+# gh auth login
+# gh auth refresh -h github.com -s admin:public_key
 
-gh auth
-gh auth loging
-gh auth login
+
+ssh-keygen -t ed25519 -C "ali@amiri.dev"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "for shooka"
