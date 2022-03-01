@@ -27,7 +27,7 @@ git checkout ubuntu/focal
 make profile-opt
 make
 make test
-sudo make altinstall
+sudo make install  # altinstall will cause some issues with skel
 cd ../../
 
 # Bazel need python 2
@@ -90,6 +90,11 @@ sudo apt update
 sudo apt install gh
 
 # # sudo apt install hibernate pm-utils 
+
+
+# VPN tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up --accept-routes
 
 # sudo apt upgrade
 # sudo apt autoremove
