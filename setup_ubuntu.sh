@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 mkdir temp
 cd temp
 rm -rf *
@@ -24,45 +26,21 @@ sudo apt install \
      zlib1g-dev libncurses5-dev libnss3-dev \
      docker.io
 
-     
-# Python 2 & Python 3.8
-# mkdir -p ./install/deadsnakes
-# cd install/deadsnakes
-# git clone https://github.com/deadsnakes/python3.7.git
-# cd python3.7
-# git checkout ubuntu/focal
-# ./configure --enable-optimizations --with-lto
-# make profile-opt
-# make
-# make test
-# sudo make install  # altinstall will cause some issues with skel
-# cd ../../
-# 
-
-# sudo apt install python3-pip
-# python3.7 -m pip install pre-commit
-
 # post docker install https://docs.docker.com/engine/install/linux-postinstall/
 sudo groupadd docker
 sudo usermod -aG docker $USER
-
-
-# mkdir google-cloud-sdk
-# cd google-cloud-sdk
-# curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-374.0.0-linux-x86_64.tar.gz
-# tar -xf google-cloud-sdk-374.0.0-linux-x86_64.tar.gz
-# sh ./google-cloud-sdk/install.sh
-# 
-# cd ../..
  
 # install bazel
 sudo npm install -g @bazel/bazelisk
-# sudo ln -s /usr/bin/bazel-4.0.0 /usr/bin/bazel
 
 # # install slack
 snap install slack --classic 
 # vscode
 snap install code --classic
+
+# Google Cloud SDK and CLI
+snap install google-cloud-sdk --classic
+snap install google-cloud-cli --classic
 
 # VPN tailscale
 curl -fsSL https://tailscale.com/install.sh | sh

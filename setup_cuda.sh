@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 # it is important to follow steps in
 # https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
