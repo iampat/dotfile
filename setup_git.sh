@@ -1,9 +1,9 @@
-# git config --global user.email "ali@amiri.dev"
-# git config --global user.name "Ali Amiri"
-# 
-# gh auth
-# gh auth login
-# gh auth refresh -h github.com -s admin:public_key
+git config --global user.email "ali@amiri.dev"
+git config --global user.name "Ali Amiri"
+
+gh auth
+gh auth login
+gh auth refresh -h github.com -s admin:public_key
 
 
 ssh-keygen -t ed25519 -C "ali@amiri.dev"
