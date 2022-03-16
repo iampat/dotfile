@@ -29,6 +29,14 @@ sudo apt install \
      zlib1g-dev libncurses5-dev libnss3-dev \
      docker.io
 
+# https://github.com/serve-robotics/skel/wiki/Update-install-dependencies-for-Local-Bazel-Workstation-Setup
+sudo apt install \
+     libgirepository1.0-dev \
+     libcairo2-dev \
+     libjpeg-dev \
+     libudev-dev \
+     pkg-config
+
 # post docker install https://docs.docker.com/engine/install/linux-postinstall/
 sudo groupadd docker
 sudo usermod -aG docker $USER
