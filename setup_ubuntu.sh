@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
+rm -rf ./temp
 mkdir temp
 cd temp
-rm -rf *
 
 sudo apt-get update
 
@@ -25,7 +25,7 @@ sudo apt install \
      libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev libffi-dev \
      libglib2.0-dev \
      gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly \
-     libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+     libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
      zlib1g-dev libncurses5-dev libnss3-dev \
      docker.io
 
@@ -38,7 +38,7 @@ sudo apt install \
      pkg-config
 
 # post docker install https://docs.docker.com/engine/install/linux-postinstall/
-sudo groupadd docker
+sudo groupadd -f docker
 sudo usermod -aG docker $USER
  
 # install bazel
@@ -49,13 +49,11 @@ snap install slack --classic
 # vscode
 snap install code --classic
 
-# Google Cloud SDK and CLI
-snap install google-cloud-sdk --classic
-snap install google-cloud-cli --classic
-
 # VPN tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --accept-routes
 
 sudo apt upgrade
 sudo apt autoremove
+
+echo "Awesome, now it's time to  setup your python! just run ./setup_python.sh"
