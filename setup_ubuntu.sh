@@ -17,7 +17,6 @@ sudo apt install \
      emacs xclip tmux \
      npm \
      clang-11 lld-11 llvm-11 clang-format-11 clang-tidy-11 clang-tools-11 \
-     golang-1.18 \
      protobuf-compiler protobuf-c-compiler protoc-gen-go \
      build-essential \
      apt-transport-https curl gnupg \
@@ -48,6 +47,11 @@ sudo npm install -g @bazel/bazelisk
 snap install slack --classic 
 # vscode
 snap install code --classic
+
+
+# Setup golang
+wget https://go.dev/dl/go1.18.linux-amd64.tar.gz -P /tmp/golang
+sudo tar -C /usr/local -xzf /tmp/golang/go1.18.linux-amd64.tar.gz
 
 # VPN tailscale
 curl -fsSL https://tailscale.com/install.sh | sh

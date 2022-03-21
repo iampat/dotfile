@@ -195,6 +195,12 @@ export GCLOUD_CREDENTIALS=$(cat ~/.config/gcloud/application_default_credentials
 
 
 export SRC_HOME=${HOME}/workspace
+
+# PMX
 export SKEL=${SRC_HOME}/serve-robotics/skel
 export PMX_CONFIG_PATH=${SKEL}/pmx/rover/config
+
+# Go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$/SRC/go
 
