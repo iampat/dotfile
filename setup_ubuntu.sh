@@ -39,19 +39,22 @@ sudo apt install \
 # post docker install https://docs.docker.com/engine/install/linux-postinstall/
 sudo groupadd -f docker
 sudo usermod -aG docker $USER
- 
+
+# Setup golang
+wget https://go.dev/dl/go1.18.linux-amd64.tar.gz -P /tmp/golang
+sudo tar -C /usr/local -xzf /tmp/golang/go1.18.linux-amd64.tar.gz
+
 # install bazel
 sudo npm install -g @bazel/bazelisk
+go install github.com/bazelbuild/buildtools/buildifier@latest
+go install github.com/bazelbuild/buildtools/buildozer@latest
+go install github.com/bazelbuild/buildtools/unused_deps@latest
 
 # # install slack
 snap install slack --classic 
 # vscode
 snap install code --classic
 
-
-# Setup golang
-wget https://go.dev/dl/go1.18.linux-amd64.tar.gz -P /tmp/golang
-sudo tar -C /usr/local -xzf /tmp/golang/go1.18.linux-amd64.tar.gz
 
 # VPN tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
