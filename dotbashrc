@@ -7,6 +7,7 @@ case $- in
     *i*) ;;
       *) return;;
 esac
+bind 'set bell-style none'
 
 # Sets history settings.
 # Does not record the same command twice and ignore spaces.
@@ -205,3 +206,12 @@ export PATH=${PATH}:/usr/local/go/bin
 export GOPATH=${SRC_HOME}/go
 export PATH=${PATH}:${GOPATH}/bin/
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ali/local/google-cloud-sdk/path.bash.inc' ]; then . '/home/ali/local/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ali/local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/ali/local/google-cloud-sdk/completion.bash.inc'; fi
+
+# Graphite CLI
+export PATH=$PATH:/home/ali/.npm-prefix
