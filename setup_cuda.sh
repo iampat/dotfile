@@ -24,7 +24,8 @@ sudo apt-get install \
      cuda-nvcc-11-1 libnpp-11-1 libnpp-dev-11-1 \
      libnvinfer8 libnvinfer-dev \
      libnvinfer-plugin8 libnvinfer-plugin-dev \
-     libnvparsers8 libnvparsers-dev
+     libnvparsers8 libnvparsers-dev \
+     libcurand-dev-11-1
 # 
 
 # Tensor RT
