@@ -50,9 +50,9 @@ go install github.com/bazelbuild/buildtools/buildifier@latest
 go install github.com/bazelbuild/buildtools/buildozer@latest
 go install github.com/bazelbuild/buildtools/unused_deps@latest
 
-# # install slack
+# install slack
 snap install slack --classic 
-# vscode
+# install vscode
 snap install code --classic
 
 

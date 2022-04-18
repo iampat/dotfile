@@ -1,28 +1,29 @@
 #!/bin/bash
 set -e
 
-rm -rf temp 
-mkdir temp
-cd temp
+
+cd /tmp
 
 
 # Python 2 & Python 3.8 + tool
-mkdir -p ./install/deadsnakes
-cd install/deadsnakes
-rm -rf python3.8
-git clone https://github.com/deadsnakes/python3.8.git
-cd python3.8
-git checkout ubuntu/bionic
-./configure --enable-optimizations --with-lto
-make profile-opt
- make
-# make test
+# https://www.linuxcapable.com/how-to-install-python-3-8-on-ubuntu-22-04-lts/
 
-sudo make install # altinstall will cause some issues with skel
+version=13
+wget https://www.python.org/ftp/python/3.8.${version}/Python-3.8.${version}.tar.xz
+tar -xf Python-3.8.${version}.tar.xz
+sudo mv Python-3.8.${version} /opt/
 
-cd ../../
-
-sudo apt install python3-pip
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
+ 
+cd /opt/Python-3.8.${version}/
+./configure --enable-optimizations --enable-shared --with-lto
+make -j 6
+sudo make altinstall # altinstall may cause some issues with skel, if so consider make install.
+sudo ldconfig /opt/Python-3.8.${version}
+cd /tmp
+wget https://bootstrap.pypa.io/get-pip.py
+python3.8 get-pip.py
+python3.8 -m pip install --upgrade pip
 python3.8 -m pip install pre-commit
 
 sudo apt update
