@@ -18,7 +18,7 @@ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-
 cd /opt/Python-3.8.${version}/
 ./configure --enable-optimizations --enable-shared --with-lto
 make -j 6
-sudo make altinstall # altinstall may cause some issues with skel, if so consider make install.
+sudo make install # altinstall may cause some issues with skel/bazel/docker, if so consider make install.
 sudo ldconfig /opt/Python-3.8.${version}
 cd /tmp
 wget https://bootstrap.pypa.io/get-pip.py
