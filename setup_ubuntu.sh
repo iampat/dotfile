@@ -26,7 +26,9 @@ sudo apt install \
      gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly \
      libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
      zlib1g-dev libncurses5-dev libnss3-dev \
-     docker.io
+     docker.io \
+     jq \
+     openjdk-11-jdk
 
 # https://github.com/serve-robotics/skel/wiki/Update-install-dependencies-for-Local-Bazel-Workstation-Setup
 sudo apt install \
@@ -43,6 +45,9 @@ sudo usermod -aG docker $USER
 # Setup golang
 wget https://go.dev/dl/go1.18.linux-amd64.tar.gz -P /tmp/golang
 sudo tar -C /usr/local -xzf /tmp/golang/go1.18.linux-amd64.tar.gz
+
+# insall jsonnet
+go install github.com/google/go-jsonnet/cmd/jsonnet@latest
 
 # install bazel
 sudo npm install -g @bazel/bazelisk

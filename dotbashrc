@@ -11,7 +11,8 @@ bind 'set bell-style none'
 
 # Sets history settings.
 # Does not record the same command twice and ignore spaces.
-export HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoreboth:erasedups
+export HISTTIMEFORMAT="%y/%m/%d %T "
 # Increases history size.
 export HISTSIZE=1000000
 export HISTFILESIZE=10000000
@@ -208,3 +209,6 @@ export PATH=${PATH}:${GOPATH}/bin/
 
 # Graphite CLI
 export PATH=$PATH:/home/ali/.npm-prefix
+
+# set up Java home
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
