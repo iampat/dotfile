@@ -195,6 +195,8 @@ export PS1="\$(date +%Y-%m-%d):\t \$PWD/\[\e[42m\]\`parse_git_branch\`\[\e[m\]\n
 # gcloud credentials
 export GCLOUD_CREDENTIALS=$(cat ~/.config/gcloud/application_default_credentials.json)
 
+# gcloud cli
+export PATH=${PATH}:${HOME}/.local/bin/google-cloud-sdk/bin/
 
 export SRC_HOME=${HOME}/workspace
 
@@ -210,5 +212,7 @@ export PATH=${PATH}:${GOPATH}/bin/
 # Graphite CLI
 export PATH=$PATH:/home/ali/.npm-prefix
 
+
 # set up Java home
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
+
