@@ -8,7 +8,7 @@ cd /tmp
 # Python 2 & Python 3.8 + tool
 # https://www.linuxcapable.com/how-to-install-python-3-8-on-ubuntu-22-04-lts/
 
-version=13
+version=14
 wget https://www.python.org/ftp/python/3.8.${version}/Python-3.8.${version}.tar.xz
 tar -xf Python-3.8.${version}.tar.xz
 sudo mv Python-3.8.${version} /opt/
@@ -20,7 +20,7 @@ cd /opt/Python-3.8.${version}/
 make -j 6
 sudo make install # altinstall may cause some issues with skel/bazel/docker, if so consider make install.
 sudo ldconfig /opt/Python-3.8.${version}
-cd /tmp
+# cd /tmp
 wget https://bootstrap.pypa.io/get-pip.py
 python3.8 get-pip.py
 python3.8 -m pip install --upgrade pip
