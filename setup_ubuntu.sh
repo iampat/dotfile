@@ -43,8 +43,11 @@ sudo groupadd -f docker
 sudo usermod -aG docker $USER
 
 # Setup golang
-wget https://go.dev/dl/go1.18.linux-amd64.tar.gz -P /tmp/golang
-sudo tar -C /usr/local -xzf /tmp/golang/go1.18.linux-amd64.tar.gz
+mkdir -p /tmp/golang
+mkdir -p /usr/local
+export PATH=${PATH}:/usr/local/go/bin/
+wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz -P /tmp/golang
+sudo tar -C /usr/local -xzf /tmp/golang/go1.19.1.linux-amd64.tar.gz
 
 # insall jsonnet
 go install github.com/google/go-jsonnet/cmd/jsonnet@latest
