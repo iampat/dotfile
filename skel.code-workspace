@@ -7,9 +7,6 @@
 			"path": "../../openvinotoolkit/cvat"
 		},
 		{
-			"path": "../random_names"
-		},
-		{
 			"path": "."
 		}
 	],

@@ -28,7 +28,8 @@ sudo apt install \
      zlib1g-dev libncurses5-dev libnss3-dev \
      docker.io \
      jq \
-     openjdk-11-jdk
+     openjdk-11-jdk \
+     cmake
 
 # https://github.com/serve-robotics/skel/wiki/Update-install-dependencies-for-Local-Bazel-Workstation-Setup
 sudo apt install \
