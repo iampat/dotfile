@@ -31,7 +31,6 @@ sudo apt install \
      openjdk-11-jdk \
      cmake
 
-# https://github.com/serve-robotics/skel/wiki/Update-install-dependencies-for-Local-Bazel-Workstation-Setup
 sudo apt install \
      libgirepository1.0-dev \
      libcairo2-dev \
