@@ -22,3 +22,4 @@
 #sudo chmod 755 /usr/local/bin/kubectl
 
 ## Make it your own!
+echo "Hello!"
