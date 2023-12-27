@@ -132,15 +132,6 @@ fi
 
 
 
-export PYTHON2_BIN_PATH=/usr/bin/python2.7
-
-export PATH=/usr/local/cuda-11/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/cuda-11/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-export CUDA_PATH=/usr/local/cuda-11
-export PATH=${PATH:+:${PATH}}:/home/ali/.local/bin
-
-
 # Git 
 # gets current branch in git repo
 function parse_git_branch() {
@@ -192,27 +183,7 @@ function parse_git_dirty {
 # Prompt
 export PS1="\$(date +%Y-%m-%d):\t \$PWD/\[\e[42m\]\`parse_git_branch\`\[\e[m\]\n\$ "
 
-# gcloud credentials
-export GCLOUD_CREDENTIALS=$(cat ~/.config/gcloud/application_default_credentials.json)
-
-# gcloud cli
-export PATH=${PATH}:${HOME}/.local/bin/google-cloud-sdk/bin/
-
-export SRC_HOME=${HOME}/workspace
-
-# PMX
-export SKEL=${SRC_HOME}/serve-robotics/skel
-export PMX_CONFIG_PATH=${SKEL}/pmx/rover/config
-
 # Go
-export PATH=${PATH}:/usr/local/go/bin
-export GOPATH=${SRC_HOME}/go
-export PATH=${PATH}:${GOPATH}/bin/
-
-# Graphite CLI
-export PATH=$PATH:/home/ali/.npm-prefix
-
-
-# set up Java home
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
-
+# export PATH=${PATH}:/usr/local/go/bin
+# export GOPATH=${SRC_HOME}/go
+# export PATH=${PATH}:${GOPATH}/bin/
