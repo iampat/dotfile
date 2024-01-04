@@ -184,6 +184,6 @@ function parse_git_dirty {
 export PS1="\$(date +%Y-%m-%d):\t \$PWD/\[\e[42m\]\`parse_git_branch\`\[\e[m\]\n\$ "
 
 # Go
-# export PATH=${PATH}:/usr/local/go/bin
+export PATH=${PATH}:/usr/local/go/bin
 # export GOPATH=${SRC_HOME}/go
 # export PATH=${PATH}:${GOPATH}/bin/
