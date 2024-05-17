@@ -181,8 +181,7 @@ function parse_git_dirty {
 }
 
 # Prompt
-export PS1="\$(date +%Y-%m-%d):\t \$PWD/\[\e[42m\]\`parse_git_branch\`\[\e[m\]\n\$ "
-
+export PS1="\$(date +%Y-%m-%d):\t \$PWD/\[\e[42m\e[30m\]\`parse_git_branch\`\[\e[0m\]\n\$ "
 # Go
 export PATH=${PATH}:/usr/local/go/bin
 # export GOPATH=${SRC_HOME}/go
